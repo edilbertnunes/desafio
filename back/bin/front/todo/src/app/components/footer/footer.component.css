@@ -1,0 +1,7 @@
+.footer{
+    height: 5%; /* esse é o tamanho que vai ocupar na página */
+    position: fixed; /* a posição vai ficar fixa */
+    bottom: 0; /* o texto vai ficar colado no final da página */
+    justify-content: flex-end ; /* o texto vai ficar a direita da pagina */
+    font-size: 1rem;
+}

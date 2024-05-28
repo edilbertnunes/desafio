@@ -1,0 +1,36 @@
+<div class="container">
+  <button routerLink="create" class="novo-todo mat elevation-z8" mat-stroked-button color="primary">Novo usuário</button>
+
+  <!-- Conteúdo dos cards-->
+  <div class="content" *ngFor="let item of list">
+      <mat-card class="mat elevation-z8">
+          <mat-card-header>
+            <mat-card-subtitle>{{item.nome}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.email}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.dataNascimento}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.sexo}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.rua}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.numero}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.complemento}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.bairro}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.cidade}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.estado}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.cep}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.cadastrado}}</mat-card-subtitle>
+          </mat-card-header>
+
+        <!--Classe com os botoes-->
+        <div class="actions">
+          <button routerLink="update/{{ item.id }}" mat-mini-fab color="accent">
+              <mat-icon>edit</mat-icon>
+          </button>
+          <!-- Ao clicar vai chamar o método delete e pega o id -->
+          <button (click)="delete(item.id)" mat-mini-fab color="warn">
+              <mat-icon>delete</mat-icon>
+          </button>
+
+        </div>
+
+        </mat-card>
+  </div>
+</div>

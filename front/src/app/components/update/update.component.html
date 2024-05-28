@@ -1,0 +1,77 @@
+<form>
+  <h1>Atualizar Usuário</h1>
+
+
+<div class="forms">
+  <mat-form-field appearance="fill">
+    <mat-label>Data de Nascimento</mat-label>
+    <input matInput [(ngModel)]="user.dataNascimento" name="dataNascimento" [matDatepicker]="picker" [max]="maxDate" required>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Nome Completo</mat-label>
+  <input [(ngModel)]="user.nome" name="nome" matInput placeholder="Pedro Paulo da Silva">
+</mat-form-field>
+
+    <mat-form-field class="form">
+      <mat-label>E-mail</mat-label>
+      <input [(ngModel)]="user.email" [formControl]="emailControl" matInput>
+      <mat-error *ngIf="emailControl.hasError('required')">
+        Email é obrigatório
+      </mat-error>
+      <mat-error *ngIf="emailControl.hasError('email')">
+        Email inválido
+      </mat-error>
+    </mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Sexo</mat-label>
+  <mat-select [(ngModel)]="user.sexo" name="sexo">
+    <mat-option value="masculino">Masculino</mat-option>
+    <mat-option value="feminino">Feminino</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>CEP</mat-label>
+  <input [(ngModel)]="user.cep" name="cep" matInput placeholder="71.123-456" (blur)="getAddress()">
+</mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Rua</mat-label>
+  <input [(ngModel)]="user.rua" name="rua" matInput placeholder="Rua 10">
+</mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Numero</mat-label>
+  <input [(ngModel)]="user.numero" name="numero" matInput placeholder="Nº casa/apto">
+</mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Complemento</mat-label>
+  <input [(ngModel)]="user.complemento" name="complemento" matInput>
+</mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Bairro</mat-label>
+  <input [(ngModel)]="user.bairro" name="bairro" matInput>
+</mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Cidade</mat-label>
+  <input [(ngModel)]="user.cidade" name="cidade" matInput placeholder="Brasília">
+</mat-form-field>
+
+<mat-form-field class="form">
+  <mat-label>Estado</mat-label>
+  <input [(ngModel)]="user.estado" name="estado" matInput placeholder="Distrito Federal">
+</mat-form-field>
+</div>
+
+<div class="buttons">
+  <button (click)="update()" mat-stroked-button color="primary">Atualizar</button>
+  <button (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+</div>
+</form>

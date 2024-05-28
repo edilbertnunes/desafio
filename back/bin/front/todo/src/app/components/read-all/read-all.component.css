@@ -1,0 +1,47 @@
+.container{
+    width: 85%; /* tamanho de 85 para nao ficar encostando nas margens*/
+    margin: auto ; /* para o conteúdo se auto organizar */
+    margin: auto;
+    margin-top: 1.5rem;
+}
+.badge{
+    margin-top: 1.5rem;
+    display: flex; /* vai centralizar o botão */
+    justify-content: center;
+    align-items: center;
+}
+.badge button {
+    margin: auto;
+    width: 100%; /* tamanho do botão em relacao ao box*/
+}
+.content{
+    width: 100%; /* vai ocupar 100% do component pai */
+}
+.novo-todo{
+    width: 100%; /* o botão vai ocupar todo o espaço */
+    margin-top: 3rem;
+}
+mat-card{
+    margin-top: .8rem; /* espaçamento entre os blocos do botão */
+    padding: 2rem ; /* dá mais espaço entre as bordas do bloco*/
+}
+p{
+    text-align: end; /* vai para o final do parágrafo */
+    font-weight: 600;
+    color: rgb(114, 111, 111);
+    margin-bottom: 0; /* retira o espaço entre o parágrafo */
+}
+.actions{
+    /* margin: .5rem;  espaçamento entre o texto e os botões */
+    text-align: end; /* joga os botoes para o final */
+}
+.actions button{
+    margin: .5rem; /* espaçamento entre os botões */
+}
+
+
+
+
+
+
+
